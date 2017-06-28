@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>检测结果</title>
+		<style>
+			/*body{
+                background: url(../images/bg.jpg)l no-repeat scroll center center;
+				color: black;
+			}*/
+			#leftDiv {
+				float: left;
+				width: 25%;
+			}
+			
+			.center{
+				float: left;
+				width: 50%;
+			}
+			.center ul{
+				position: absolute;
+				top: 100px;
+				left: 250px;
+			}
+			.center ul li{
+				list-style: none;
+				margin-top: 50px;
+			}
+			
+			#rightDiv {
+				float: right;
+				width: 30%;
+				position: absolute;
+				top: 450px;
+				left: 250px;
+			}
+		</style>
+	</head>
+	<body>
+		<img style="position: absolute; left: 200px; top: 90px;" src="../images/bg.jpg" />
+		<div class="center">
+			<ul>
+				<li><img src={{ filename }} width="250px" height="250px"></li>
+			</ul>
+		</div>
+		<div id="rightDiv">
+			<ul>
+				<li style="list-style:none;">
+                    <img src={{ img }} width="250px" height="250px"><br>
+                    相似度{{ contr }}</li>
+			</ul>
+		</div>
+		<div id="BottomDiv">
+			<p style="position: absolute; top: 700px; right: 400px;">
+				上传完毕。 客户端:
+				<font color="red">{{ ip_address }}</font><br/> 文件
+				<a href="{{ filename }}">{{ filename }}</a> {{ explain}}<br/>
+			</p>	
+		</div>
+	</body>
+</html>

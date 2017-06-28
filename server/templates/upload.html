@@ -1,0 +1,62 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>上传图片</title>
+		<link href="camera(2).png" rel="shortcut icon" type="images/x-icon">
+		<script>
+			function submitForm() {
+				//判断上传文件是否为空
+				if(document.getElementById('file').value != "") {
+					document.forms.form1.submit();
+					document.getElementById('file').value = "";
+				}
+			}
+			//自动提交表单
+			window.setInterval('submitForm()', 50);
+		</script>
+		<style type="text/css">
+			/*.bg {
+				background: url(../images/bg.jpg) no-repeat scroll top center;
+			}*/
+			 
+			form {
+				position: relative; 
+				height: 400px;
+				line-height: 400px;
+			}
+			li{
+				width: 135px;
+				list-style: none;
+				margin-left: 200px;
+				margin-top: 50px;
+				border:  groove oldlace;
+				border-radius: 5px;
+			}
+			li a{
+				font-family: "楷体";
+				font-size: 2em;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="bg">
+			<img style="position: absolute; z-index: -1; top:90px; left: 200px;" src="../images/bg.jpg" />
+			<form enctype="multipart/form-data" target="_self" method="post" id="form1">
+				<div align="center">
+					<p style="font-family: '楷体'; color: black; font-size: 20px; position: absolute; left: 250px; top: 140px; ">人脸识别，点击图片上传</p>
+					<label style="position: absolute; top: 325px; left: 490px;" for="file"><img src="camera(2).png"></label>
+					<input type="file" name="file1" id="file" style="display: none">
+				</div>
+			</form>
+			<div id="button">
+				<ul>
+					<li><a>人脸分析</a></li>
+					<li><a>人脸对比</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>
